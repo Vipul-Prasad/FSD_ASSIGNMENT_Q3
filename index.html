@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q3 - JavaScript Form Validation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Registration Form</h2>
+    <p class="subtitle">Practical Assignment 3: Client-side Form Validation with Regex</p>
+
+    <!-- Success notification -->
+    <div id="successMessage" class="success-message">
+      Registration successful!
+    </div>
+
+    <form id="registrationForm" novalidate>
+      <!-- Full Name Field -->
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Enter your full name" />
+        <span class="error-text" id="nameError"></span>
+      </div>
+
+      <!-- Email Field -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="example@domain.com" />
+        <span class="error-text" id="emailError"></span>
+      </div>
+
+      <!-- Phone Number Field -->
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" maxlength="10" placeholder="10-digit mobile number" />
+        <span class="error-text" id="phoneError"></span>
+      </div>
+
+      <!-- Password Field -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="At least 6 characters" />
+        <span class="error-text" id="passwordError"></span>
+      </div>
+
+      <!-- Confirm Password Field -->
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Re-enter password" />
+        <span class="error-text" id="confirmPasswordError"></span>
+      </div>
+
+      <!-- Actions -->
+      <div class="button-group">
+        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="button" id="resetBtn" class="btn btn-secondary">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
